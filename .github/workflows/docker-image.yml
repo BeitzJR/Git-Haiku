@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file hello2/Dockerfile --tag hello2:$(date +%s)
+      run: docker build ./hello2 --file Dockerfile --tag hello2:$(date +%s)
