@@ -1,7 +1,7 @@
 This is Haiku!!
-
-
-
+This is Hau's Haiku
+It is not very good
+Much Apologies
 Github is awesome
 Version control is better
 Teammates are the best
