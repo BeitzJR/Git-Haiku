@@ -10,9 +10,12 @@
 name: Publish Docker image
 
 on:
-  release:
-    types: [published]
-
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -36,7 +39,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: ./hello2
+          context: ./hello2/
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
